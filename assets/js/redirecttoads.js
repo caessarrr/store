@@ -15,5 +15,5 @@ if (!localStorage.getItem('redirected')) {
 
 } else {
     // Jika sudah ada data dalam local storage, hapus data tersebut
-    localStorage.removeItem('redirected');
+    // localStorage.removeItem('redirected');
 }
