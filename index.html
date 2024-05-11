@@ -1,14 +1,22 @@
-<!-- index.html -->
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="assets/css/style.css">
-    <title>(Name) Store</title>
+    <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.8/css/line.css">
+    <title>Caessar Web Store</title>
 </head>
 <body>
+    <header class="header">
+        <div class="headcontainer">
+            <img src="assets/img/caessar.jpg" alt="Caessar">
+            <button id="toggle-mode" class="mode-toggle">
+                <i id="sun-icon" class="uil uil-sun"></i>
+            </button>
+            
+        </div>
+    </header>
 
     <div class="container" id="product-list"></div>
 
@@ -17,9 +25,8 @@
             <input type="text" id="search-input" placeholder="Cari judul...">
         </div>
     </div>
-    
 
     <script src="assets/js/content.js"></script>
-    <script src="assets/js/redirecttoads.js"></script>
+    <script src="assets/js/main.js"></script>
 </body>
 </html>
