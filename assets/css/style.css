@@ -10,11 +10,12 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: #ececec; /* Warna latar belakang header */
+    background-color: #ffffffd6; /* Warna latar belakang header */
     width: 100%;
     height: 50px;
     position: sticky;
     top: 0;
+    box-shadow: 0 2px 6px rgba(58, 58, 58, 0.1);
 }
 
 .headcontainer {
@@ -22,14 +23,20 @@ body {
     width: calc(100% - 18%);
     height: 50px;
     align-items: center;
+    justify-content: space-between;
 }
 
 .header img {
     width: 30px;
     height: auto;
     border-radius: 50%;
-    border: 1px  solid #000000;
     padding: 2px;
+}
+
+.mode-toggle {
+    border: none;
+    background-color: #ffffff00;
+    font-size: 20px;
 }
 
 .container {
@@ -42,7 +49,7 @@ body {
 }
 
 .card {
-    background-color: #d8d7d767; /* Warna latar belakang card */
+    background-color: #e9e9e953; /* Warna latar belakang card */
     border-radius: 8px;
     margin: 10px;
     width: 300px;
@@ -77,7 +84,7 @@ body {
     width: 100%;
     padding: 10px;
     margin-top: 10px;
-    background-color: #23232328; /* Warna latar belakang tombol */
+    background-color: #8d8d8d28; /* Warna latar belakang tombol */
     color: #000000; /* Warna teks tombol */
     text-align: center;
     text-decoration: none;
@@ -90,7 +97,7 @@ body {
     bottom: 0;
     left: 0;
     width: 100%;
-    background-color: #ededed; /* Warna latar belakang search bar */
+    background-color: #f4f4f4eb; /* Warna latar belakang search bar */
     padding-top: 10px;
     padding-bottom: 10px;
 }
@@ -106,36 +113,50 @@ body {
     width: calc(100% - 18%);
     padding: 8px;
     border: 2px solid #d8d8d855;
-    background-color: #ededed; /* Warna latar belakang input search */
-    color: #00000055; /* Warna teks input search */
+    background-color: #f4f4f4eb; /* Warna latar belakang input search */
+    color: #000000b0; /* Warna teks input search */
     border-radius: 5px;
     outline: none;
 }
 
 /* Dark Mode */
 body.dark-mode {
-    background-color: #000; /* Warna latar belakang utama di dark mode */
+    background-color: #222222; /* Warna latar belakang utama di dark mode */
 }
 
 .header.dark-mode {
-    background-color: #000; /* Warna latar belakang header di dark mode */
+    background-color: #222222; /* Warna latar belakang header di dark mode */
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.208);
+}
+
+.header img .dark-mode {
+    border: 1px  solid #999999;
+}
+
+.mode-toggle.dark-mode {
+    color: #919191;
 }
 
 .card.dark-mode {
-    background-color: #fff; /* Warna latar belakang card di dark mode */
+    background-color: #55555536; /* Warna latar belakang card di dark mode */
+    color: #ffffff;
+}
+
+.card-title.dark-mode {
+    color: #ffffff; /* Warna teks judul card */
 }
 
 .btn.dark-mode {
-    background-color: #fff; /* Warna latar belakang tombol di dark mode */
-    color: #000000; /* Warna teks tombol di dark mode */
+    background-color: #5a5a5a88; /* Warna latar belakang tombol di dark mode */
+    color: #ffffff; /* Warna teks tombol di dark mode */
 }
 
 .search-bar.dark-mode {
-    background-color: #000; /* Warna latar belakang search bar di dark mode */
+    background-color: #222222e9; /* Warna latar belakang search bar di dark mode */
 }
 
 #search-input.dark-mode {
-    background-color: #fff; /* Warna latar belakang input search di dark mode */
-    border-color: #000; /* Warna border input search di dark mode */
-    color: #000000; /* Warna teks input search di dark mode */
+    background-color: #222222e9; /* Warna latar belakang input search di dark mode */
+    border-color: #6a6a6a; /* Warna border input search di dark mode */
+    color: #969696; /* Warna teks input search di dark mode */
 }

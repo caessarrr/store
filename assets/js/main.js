@@ -6,6 +6,7 @@ document.addEventListener('DOMContentLoaded', function() {
     const buttons = document.querySelectorAll('.btn');
     const searchBar = document.querySelector('.search-bar');
     const searchInput = document.getElementById('search-input');
+    const cardTitles = document.querySelectorAll('.card-title'); // Menambahkan selektor untuk judul kartu
 
     toggleModeButton.addEventListener('click', function() {
         body.classList.toggle('dark-mode');
@@ -14,6 +15,8 @@ document.addEventListener('DOMContentLoaded', function() {
         buttons.forEach(button => button.classList.toggle('dark-mode'));
         searchBar.classList.toggle('dark-mode');
         searchInput.classList.toggle('dark-mode');
+        cardTitles.forEach(title => title.classList.toggle('dark-mode')); // Menambahkan judul kartu ke dalam loop
+        toggleModeButton.classList.toggle('dark-mode'); // Menambahkan class dark-mode ke tombol mode-toggle
 
         if (body.classList.contains('dark-mode')) {
             toggleModeButton.innerHTML = '<i class="uil uil-moon"></i>';
@@ -32,6 +35,10 @@ document.addEventListener('DOMContentLoaded', function() {
         buttons.forEach(button => button.classList.add('dark-mode'));
         searchBar.classList.add('dark-mode');
         searchInput.classList.add('dark-mode');
+        cardTitles.forEach(title => title.classList.add('dark-mode')); // Menambahkan judul kartu ke dalam loop
+        toggleModeButton.classList.add('dark-mode'); // Menambahkan class dark-mode ke tombol mode-toggle
         toggleModeButton.innerHTML = '<i class="uil uil-moon"></i>';
     }
 });
+
+
