@@ -6,12 +6,12 @@ document.addEventListener("DOMContentLoaded", function() {
 
     // Data produk dalam format JSON
     const products = [
-        { id: 1, name: "Product 1", image: "assets/img/test.jpg", downloadLink: "#", price: "$10", demoLink: "https://demo.product1.com" },
-        { id: 2, name: "Product 2", image: "assets/img/test.jpg", downloadLink: "#", price: "$15", demoLink: "https://demo.product2.com" },
-        { id: 3, name: "Product 3", image: "assets/img/test.jpg", downloadLink: "#", price: "$20", demoLink: "https://demo.product3.com" },
-        { id: 4, name: "Product 4", image: "assets/img/test.jpg", downloadLink: "#", price: "$25", demoLink: "https://demo.product4.com" },
-        { id: 5, name: "Product 5", image: "assets/img/test.jpg", downloadLink: "#", price: "$30", demoLink: "https://demo.product5.com" },
-        { id: 6, name: "Product 6", image: "assets/img/test.jpg", downloadLink: "#", price: "$35", demoLink: "https://demo.product6.com" },
+        { id: 1, name: "Product 1", image: "assets/img/test.jpg", downloadLink: "#", price: "Rp 5.000", demoLink: "https://demo.product1.com" },
+        { id: 2, name: "Product 2", image: "assets/img/test.jpg", downloadLink: "#", price: "Rp 5.000", demoLink: "https://demo.product2.com" },
+        { id: 3, name: "Product 3", image: "assets/img/test.jpg", downloadLink: "#", price: "Rp 5.000", demoLink: "https://demo.product3.com" },
+        { id: 4, name: "Product 4", image: "assets/img/test.jpg", downloadLink: "#", price: "Rp 5.000", demoLink: "https://demo.product4.com" },
+        { id: 5, name: "Product 5", image: "assets/img/test.jpg", downloadLink: "#", price: "Rp 5.000", demoLink: "https://demo.product5.com" },
+        { id: 6, name: "Product 6", image: "assets/img/test.jpg", downloadLink: "#", price: "Rp 15.000", demoLink: "https://demo.product6.com" },
         // Anda dapat menambahkan produk lainnya di sini
     ];
 
