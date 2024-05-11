@@ -10,7 +10,7 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: #ffffffd6; /* Warna latar belakang header */
+    background-color: #ffffffee; /* Warna latar belakang header */
     width: 100%;
     height: 50px;
     position: sticky;
@@ -136,7 +136,7 @@ body.dark-mode {
 }
 
 .header.dark-mode {
-    background-color: #222222; /* Warna latar belakang header di dark mode */
+    background-color: #222222ee; /* Warna latar belakang header di dark mode */
     box-shadow: 0 2px 6px rgba(0, 0, 0, 0.208);
 }
 

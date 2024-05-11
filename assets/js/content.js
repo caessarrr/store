@@ -4,6 +4,9 @@ document.addEventListener("DOMContentLoaded", function() {
     const productList = document.getElementById("product-list");
     const searchInput = document.getElementById("search-input");
 
+
+
+    
     // Data produk dalam format JSON
     const products = [
         { id: 1, name: "Product 1", image: "assets/img/test.jpg", downloadLink: "#", price: "Rp 5.000", demoLink: "https://demo.product1.com" },
@@ -14,6 +17,11 @@ document.addEventListener("DOMContentLoaded", function() {
         { id: 6, name: "Product 6", image: "assets/img/test.jpg", downloadLink: "#", price: "Rp 15.000", demoLink: "https://demo.product6.com" },
         // Anda dapat menambahkan produk lainnya di sini
     ];
+
+
+
+
+
 
     // Fungsi untuk membuat card produk
     function createProductCard(product) {
