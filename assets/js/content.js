@@ -3,15 +3,15 @@
 document.addEventListener("DOMContentLoaded", function() {
     const productList = document.getElementById("product-list");
     const searchInput = document.getElementById("search-input");
- 
+
     // Data produk dalam format JSON
     const products = [
-        { id: 1, name: "Product 1 Product Product Product Product 1 Product Product Product", image: "assets/img/test.jpg", downloadLink: "#" },
-        { id: 2, name: "Product 2", image: "assets/img/test.jpg", downloadLink: "#" },
-        { id: 3, name: "Product 3", image: "assets/img/test.jpg", downloadLink: "#" },
-        { id: 4, name: "Product 4", image: "assets/img/test.jpg", downloadLink: "#" },
-        { id: 5, name: "Product 5", image: "assets/img/test.jpg", downloadLink: "#" },
-        { id: 6, name: "Product 6", image: "assets/img/test.jpg", downloadLink: "#" },
+        { id: 1, name: "Product 1", image: "assets/img/test.jpg", downloadLink: "#", price: "$10", demoLink: "https://demo.product1.com" },
+        { id: 2, name: "Product 2", image: "assets/img/test.jpg", downloadLink: "#", price: "$15", demoLink: "https://demo.product2.com" },
+        { id: 3, name: "Product 3", image: "assets/img/test.jpg", downloadLink: "#", price: "$20", demoLink: "https://demo.product3.com" },
+        { id: 4, name: "Product 4", image: "assets/img/test.jpg", downloadLink: "#", price: "$25", demoLink: "https://demo.product4.com" },
+        { id: 5, name: "Product 5", image: "assets/img/test.jpg", downloadLink: "#", price: "$30", demoLink: "https://demo.product5.com" },
+        { id: 6, name: "Product 6", image: "assets/img/test.jpg", downloadLink: "#", price: "$35", demoLink: "https://demo.product6.com" },
         // Anda dapat menambahkan produk lainnya di sini
     ];
 
@@ -22,7 +22,11 @@ document.addEventListener("DOMContentLoaded", function() {
             <img src="${product.image}" alt="${product.name}">
             <div class="card-content">
                 <h2 class="card-title">${product.name}</h2>
-                <a href="${product.downloadLink}" class="btn">Download gratis</a>
+                <div class="product-info">
+                    <div class="price">${product.price}</div>
+                    <a href="${product.demoLink}" class="demo-link"><i class="uil uil-youtube"></i> Demo</a>
+                </div>
+                <a href="${product.downloadLink}" class="btn">Download</a>
             </div>
         </div>
         `;

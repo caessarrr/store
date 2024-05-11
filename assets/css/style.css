@@ -79,6 +79,17 @@ body {
     color: #000000; /* Warna teks judul card */
 }
 
+.product-info {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 10px;
+}
+
+.product-info a {
+    text-decoration: none;
+    color: #000000;
+}
+
 .btn {
     display: block;
     width: 100%;
@@ -137,16 +148,20 @@ body.dark-mode {
     color: #919191;
 }
 
-.card.dark-mode {
+.dark-mode .card {
     background-color: #55555536; /* Warna latar belakang card di dark mode */
     color: #ffffff;
 }
 
-.card-title.dark-mode {
+.dark-mode .card-title {
     color: #ffffff; /* Warna teks judul card */
 }
 
-.btn.dark-mode {
+.dark-mode .product-info a {
+    color: #ffffff; /* Ganti warna teks sesuai kebutuhan Anda dalam mode gelap */
+}
+
+.dark-mode .btn {
     background-color: #5a5a5a88; /* Warna latar belakang tombol di dark mode */
     color: #ffffff; /* Warna teks tombol di dark mode */
 }
