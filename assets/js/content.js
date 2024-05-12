@@ -3,25 +3,18 @@
 document.addEventListener("DOMContentLoaded", function() {
     const productList = document.getElementById("product-list");
     const searchInput = document.getElementById("search-input");
+    const categoryButtons = document.querySelectorAll(".category-btn");
 
-
-
-    
     // Data produk dalam format JSON
     const products = [
-        { id: 1, name: "Product 1", image: "assets/img/test.jpg", downloadLink: "#", price: "Rp 5.000", demoLink: "https://demo.product1.com" },
-        { id: 2, name: "Product 2", image: "assets/img/test.jpg", downloadLink: "#", price: "Rp 5.000", demoLink: "https://demo.product2.com" },
-        { id: 3, name: "Product 3", image: "assets/img/test.jpg", downloadLink: "#", price: "Rp 5.000", demoLink: "https://demo.product3.com" },
-        { id: 4, name: "Product 4", image: "assets/img/test.jpg", downloadLink: "#", price: "Rp 5.000", demoLink: "https://demo.product4.com" },
-        { id: 5, name: "Product 5", image: "assets/img/test.jpg", downloadLink: "#", price: "Rp 5.000", demoLink: "https://demo.product5.com" },
-        { id: 6, name: "Product 6", image: "assets/img/test.jpg", downloadLink: "#", price: "Rp 15.000", demoLink: "https://demo.product6.com" },
+        { id: 1, name: "Product 1", image: "assets/img/test.jpg", downloadLink: "#", price: "Rp 5.000", demoLink: "https://demo.product1.com", category: "component" },
+        { id: 2, name: "Product 2", image: "assets/img/test.jpg", downloadLink: "#", price: "Rp 5.000", demoLink: "https://demo.product2.com", category: "section" },
+        { id: 3, name: "Product 3", image: "assets/img/test.jpg", downloadLink: "#", price: "Rp 5.000", demoLink: "https://demo.product3.com", category: "page" },
+        { id: 4, name: "Product 4", image: "assets/img/test.jpg", downloadLink: "#", price: "Rp 5.000", demoLink: "https://demo.product4.com", category: "complete-website" },
+        { id: 5, name: "Product 5", image: "assets/img/test.jpg", downloadLink: "#", price: "Rp 5.000", demoLink: "https://demo.product5.com", category: "component" },
+        { id: 6, name: "Product 6", image: "assets/img/test.jpg", downloadLink: "#", price: "Rp 15.000", demoLink: "https://demo.product6.com", category: "section" },
         // Anda dapat menambahkan produk lainnya di sini
     ];
-
-
-
-
-
 
     // Fungsi untuk membuat card produk
     function createProductCard(product) {
@@ -50,15 +43,39 @@ document.addEventListener("DOMContentLoaded", function() {
     renderProductList(products);
 
     // Fungsi untuk melakukan pencarian produk
-    function searchProducts(searchTerm) {
-        const filteredProducts = products.filter(product =>
+    function searchProducts(searchTerm, category) {
+        let filteredProducts = products;
+
+        if (category !== 'all') {
+            filteredProducts = filteredProducts.filter(product =>
+                product.category === category
+            );
+        }
+
+        filteredProducts = filteredProducts.filter(product =>
             product.name.toLowerCase().includes(searchTerm.toLowerCase())
         );
+        
         renderProductList(filteredProducts);
     }
 
     // Tangani perubahan pada input pencarian
     searchInput.addEventListener("input", function(event) {
-        searchProducts(event.target.value);
+        const searchTerm = event.target.value;
+        const selectedCategory = document.querySelector('.category-btn.active').dataset.category;
+        searchProducts(searchTerm, selectedCategory);
+    });
+
+    // Tangani pemilihan kategori
+    categoryButtons.forEach(button => {
+        button.addEventListener('click', function() {
+            // Hapus kelas active dari semua tombol kategori
+            categoryButtons.forEach(btn => btn.classList.remove('active'));
+            // Tambahkan kelas active ke tombol yang dipilih
+            button.classList.add('active');
+            const searchTerm = searchInput.value;
+            const selectedCategory = button.dataset.category;
+            searchProducts(searchTerm, selectedCategory);
+        });
     });
 });
