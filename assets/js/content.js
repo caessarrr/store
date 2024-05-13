@@ -11,8 +11,8 @@ document.addEventListener("DOMContentLoaded", function() {
         { id: 2, name: "Product 2", image: "assets/img/test.jpg", downloadLink: "#", price: "Rp 5.000", demoLink: "https://demo.product2.com", category: "section" },
         { id: 3, name: "Product 3", image: "assets/img/test.jpg", downloadLink: "#", price: "Rp 5.000", demoLink: "https://demo.product3.com", category: "page" },
         { id: 4, name: "Product 4", image: "assets/img/test.jpg", downloadLink: "#", price: "Rp 5.000", demoLink: "https://demo.product4.com", category: "complete-website" },
-        { id: 5, name: "Product 5", image: "assets/img/test.jpg", downloadLink: "#", price: "Rp 5.000", demoLink: "https://demo.product5.com", category: "component" },
-        { id: 6, name: "Product 6", image: "assets/img/test.jpg", downloadLink: "#", price: "Rp 15.000", demoLink: "https://demo.product6.com", category: "section" },
+        { id: 5, name: "Product 5", image: "assets/img/test.jpg", downloadLink: "#", price: "Rp 5.000", demoLink: "https://demo.product5.com", category: "tool" },
+        { id: 6, name: "Product 6", image: "assets/img/test.jpg", downloadLink: "#", price: "Rp 15.000", demoLink: "https://demo.product6.com", category: "feature" },
         // Anda dapat menambahkan produk lainnya di sini
     ];
 
