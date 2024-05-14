@@ -107,28 +107,47 @@ body {
     color: #000000; /* Warna teks judul card */
 }
 
-.product-info {
+.price .real-price {
+    text-decoration: line-through;
+    text-decoration-color: #00000032;
+    color: #00000065;
+}
+
+.product-btn {
     display: flex;
     justify-content: space-between;
     margin-top: 10px;
+    gap: 10px;
 }
 
-.product-info a {
+.product-btn a {
     text-decoration: none;
-    color: #000000;
 }
+
+.product-btn a i {
+    font-weight: bolder;
+    font-size: 20px;
+}
+
 
 .btn {
     display: block;
-    width: 100%;
-    padding: 10px;
+    width: 90%;
+    padding: 8px;
     margin-top: 10px;
-    background-color: #8d8d8d28; /* Warna latar belakang tombol */
-    color: #000000; /* Warna teks tombol */
+    background-color: #222222; /* Warna latar belakang tombol */
+    color: #ffffff; /* Warna teks tombol */
     text-align: center;
     text-decoration: none;
     border-radius: 5px;
     transition: background-color 0.3s ease;
+}
+
+.demo-link {
+    background-color: #00000000;
+    border: 1.8px solid #000000;
+    color: #000000;
+    max-width: 80px;
 }
 
 .search-bar {
@@ -192,13 +211,20 @@ body.dark-mode  {
     color: #ffffff; /* Warna teks judul card */
 }
 
-.dark-mode .product-info a {
-    color: #ffffff; /* Ganti warna teks sesuai kebutuhan Anda dalam mode gelap */
+.dark-mode .price .real-price {
+    color: #ffffff4c;
+    text-decoration-color: #ffffff32;
 }
 
 .dark-mode .btn {
-    background-color: #5a5a5a88; /* Warna latar belakang tombol di dark mode */
-    color: #ffffff; /* Warna teks tombol di dark mode */
+    background-color: #969696; /* Warna latar belakang tombol di dark mode */
+    color: #222222; /* Warna teks tombol di dark mode */
+}
+
+.dark-mode .demo-link {
+    background-color: #00000000;
+    color: #969696;
+    border: 2px solid #969696;
 }
 
 .dark-mode .search-bar {

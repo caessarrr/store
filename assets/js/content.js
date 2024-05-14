@@ -7,12 +7,12 @@ document.addEventListener("DOMContentLoaded", function() {
 
     // Data produk dalam format JSON
     const products = [
-        { id: 1, name: "Product 1", image: "assets/img/test.jpg", downloadLink: "#", price: "Rp 5.000", demoLink: "https://demo.product1.com", category: "component" },
-        { id: 2, name: "Product 2", image: "assets/img/test.jpg", downloadLink: "#", price: "Rp 5.000", demoLink: "https://demo.product2.com", category: "section" },
-        { id: 3, name: "Product 3", image: "assets/img/test.jpg", downloadLink: "#", price: "Rp 5.000", demoLink: "https://demo.product3.com", category: "page" },
-        { id: 4, name: "Product 4", image: "assets/img/test.jpg", downloadLink: "#", price: "Rp 5.000", demoLink: "https://demo.product4.com", category: "complete-website" },
-        { id: 5, name: "Product 5", image: "assets/img/test.jpg", downloadLink: "#", price: "Rp 5.000", demoLink: "https://demo.product5.com", category: "tool" },
-        { id: 6, name: "Product 6", image: "assets/img/test.jpg", downloadLink: "#", price: "Rp 15.000", demoLink: "https://demo.product6.com", category: "feature" },
+        { id: 1, name: "Product 1", image: "assets/img/test.jpg", downloadLink: "#", realPrice: "Rp 10.000", discountPrice: "Rp 5.000", demoLink: "https://demo.product1.com", category: "component" },
+        { id: 2, name: "Product 2", image: "assets/img/test.jpg", downloadLink: "#", realPrice: "Rp 10.000", discountPrice: "Rp 5.000", demoLink: "https://demo.product2.com", category: "section" },
+        { id: 3, name: "Product 3", image: "assets/img/test.jpg", downloadLink: "#", realPrice: "Rp 10.000", discountPrice: "Rp 5.000", demoLink: "https://demo.product3.com", category: "page" },
+        { id: 4, name: "Product 4", image: "assets/img/test.jpg", downloadLink: "#", realPrice: "Rp 10.000", discountPrice: "Rp 5.000", demoLink: "https://demo.product4.com", category: "complete-website" },
+        { id: 5, name: "Product 5", image: "assets/img/test.jpg", downloadLink: "#", realPrice: "Rp 10.000", discountPrice: "Rp 5.000", demoLink: "https://demo.product5.com", category: "tool" },
+        { id: 6, name: "Product 6", image: "assets/img/test.jpg", downloadLink: "#", realPrice: "Rp 20.000", discountPrice: "Rp 15.000", demoLink: "https://demo.product6.com", category: "feature" },
         // Anda dapat menambahkan produk lainnya di sini
     ];
 
@@ -23,11 +23,14 @@ document.addEventListener("DOMContentLoaded", function() {
             <img src="${product.image}" alt="${product.name}">
             <div class="card-content">
                 <h2 class="card-title">${product.name}</h2>
-                <div class="product-info">
-                    <div class="price">${product.price}</div>
-                    <a href="${product.demoLink}" class="demo-link"><i class="uil uil-youtube"></i> Demo</a>
+                <div class="price">
+                    <span class="real-price">${product.realPrice}</span>
+                    <span class="discount-price">${product.discountPrice}</span>
                 </div>
-                <a href="${product.downloadLink}" class="btn">Download</a>
+                <div class="product-btn">
+                    <a href="${product.demoLink}" class="demo-link btn"><i class="uil uil-youtube"></i></a>
+                    <a href="${product.downloadLink}" class="btn"><i class="uil uil-import"></i></a>
+                </div>
             </div>
         </div>
         `;
@@ -55,7 +58,7 @@ document.addEventListener("DOMContentLoaded", function() {
         filteredProducts = filteredProducts.filter(product =>
             product.name.toLowerCase().includes(searchTerm.toLowerCase())
         );
-        
+
         renderProductList(filteredProducts);
     }
 
