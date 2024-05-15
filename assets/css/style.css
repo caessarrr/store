@@ -39,16 +39,6 @@ body {
     font-size: 20px;
 }
 
-.category-bar {
-    display: flex;
-    background-color: #ffffffee;
-    box-shadow: 0 2px 6px rgba(58, 58, 58, 0.1);
-    margin-bottom: 20px;
-    justify-content: center;
-    position: sticky;
-    top: 49px;
-}
-
 .category-list {
     display: flex;
     align-items: center;
@@ -192,11 +182,6 @@ body.dark-mode  {
     color: #919191;
 }
 
-.dark-mode .category-bar {
-    background-color: #222222ee;
-    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.208);
-
-}
 
 .dark-mode .category-btn {
     color: #919191;
